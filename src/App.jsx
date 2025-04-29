@@ -5,25 +5,36 @@ import Introduction from "./components/Introduction";
 import { AppProvider } from "./context/AppContext";
 import UploadRequirements from "./components/UploadRequirements";
 
+// function App() {
+//   return (
+//     <>
+//       <AppProvider>
+//         <BrowserRouter basename="/AutoTestX-Frontend">
+//           <Routes>
+//             <Route path="/" element={<Home />}>
+//               <Route path="/" element={<Introduction />} />
+//               <Route path="/introduction" element={<Introduction />} />
+//               <Route path="/upload-requirements" element={<UploadRequirements />} />
+//             </Route>
+//           </Routes>
+//         </BrowserRouter>
+//       </AppProvider>
+//     </>
+//   );
+// }
 function App() {
   return (
-    <>
-      <AppProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />}>
-              <Route path="/" element={<Introduction />}></Route>
-              <Route path="/introduction" element={<Introduction />}></Route>
-              <Route
-                path="/upload-requirements"
-                element={<UploadRequirements />}
-              ></Route>
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </AppProvider>
-    </>
+    <AppProvider>
+      <Routes>
+        <Route path="/" element={<Home />}>
+          <Route index element={<Introduction />} />
+          <Route path="introduction" element={<Introduction />} />
+          <Route path="upload-requirements" element={<UploadRequirements />} />
+        </Route>
+      </Routes>
+    </AppProvider>
   );
 }
+
 
 export default App;
