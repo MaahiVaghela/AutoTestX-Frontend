@@ -3,10 +3,7 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/AutoTestX-Frontend/',
   plugins: [react()],
-  test: {
-    environment: 'jsdom',
-    setupFiles: ['./vitest.setup.js'],
-  },
-   base: '/AutoTestX-Frontend/'
+ 
 });
