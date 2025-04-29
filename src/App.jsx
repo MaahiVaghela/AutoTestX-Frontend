@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Introduction from "./components/Introduction";
@@ -25,6 +25,7 @@ import UploadRequirements from "./components/UploadRequirements";
 function App() {
   return (
     <AppProvider>
+      <HashRouter>
       <Routes>
         <Route path="/" element={<Home />}>
           <Route index element={<Introduction />} />
@@ -32,6 +33,7 @@ function App() {
           <Route path="upload-requirements" element={<UploadRequirements />} />
         </Route>
       </Routes>
+      </HashRouter>
     </AppProvider>
   );
 }
