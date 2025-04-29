@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://MaahiVaghela.github.io/AutoTestX-Frontend",
+  "homepage": "https://MaahiVaghela.github.io/autotestx-frontend",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
